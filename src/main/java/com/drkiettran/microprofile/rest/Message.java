@@ -18,19 +18,34 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class Message implements Serializable {
 	private static final long serialVersionUID = 2120914098830910225L;
+	private static final Logger LOGGER = LoggerFactory.getLogger(Message.class);
 
-	@JsonProperty("name")
-	private String name;
+	@JsonProperty("id")
+	private int id;
+
+	@JsonProperty("first-name")
+	private String firstName;
+
+	@JsonProperty("last-name")
+	private String lastName;
 
 	@JsonProperty("message")
 	private String message;
 
-	public String getName() {
-		return name;
+	public String getfirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setfirstName(String firstName) {
+		this.name = firstName;
+	}
+
+	publicString getlastName() {
+		return lastName;
+	}
+
+	public void setlastName(String lastName) {
+		this.name = lastName;
 	}
 
 	public String getMessage() {
